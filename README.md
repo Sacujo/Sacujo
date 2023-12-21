@@ -21,3 +21,7 @@
           <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="sacujo" />
         </a>
 </p>
+
+<p align="center"> 
+          <img src="https://www.codewars.com/users/Sacujo/badges/small" alt="CodeWars" />
+</p>
