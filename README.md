@@ -17,11 +17,13 @@
 
 
 <p align="center"> 
-        <a href="https://sacujo.t.me" target="blank">
+        <a href="https://sacujo.t.me" target="_blank">
           <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="sacujo" />
         </a>
 </p>
 
 <p align="center"> 
+        <a href="https://www.codewars.com/users/Sacujo" tatget="_blank">
           <img src="https://www.codewars.com/users/Sacujo/badges/small" alt="CodeWars" />
+        </a>
 </p>
