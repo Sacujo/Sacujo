@@ -24,6 +24,13 @@
 
 <p align="center"> 
         <a href="https://www.codewars.com/users/Sacujo" tatget="_blank">
-          <img src="https://www.codewars.com/users/Sacujo/badges/small" alt="CodeWars" />
+          <img src="https://www.codewars.com/users/Sacujo/badges/large" alt="CodeWars" />
+        </a>
+</p>
+
+
+<p align="center"> 
+        <a href="https://leetcode.com/Sacujo" tatget="_blank">
+          <img src="https://leetcard.jacoblin.cool/Sacujo?theme=dark&font=Domine" alt="LeetCode" />
         </a>
 </p>
