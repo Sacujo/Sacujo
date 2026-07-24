@@ -1,43 +1,162 @@
-<!-- Intro --> <h3 align="center"> <samp>&gt; Hey There!, I am <b>Igor Guryan</b> </samp> </h3> <p align="center"> <samp> <br> 「 Backend Developer · <b>Go</b> · Krasnodar, Russia 」 <br> <br> </samp> </p> <p align="center"> <a href="https://sacujo.t.me" target="_blank"> <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="telegram" /> </a> <a href="https://github.com/Sacujo/url-shortener" target="_blank"> <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="go" /> </a> </p>
-Обо мне :
-Backend-разработчик на Go. Чтобы разобраться, как устроен веб изнутри, написал сервис коротких ссылок без фреймворков и без внешних зависимостей — с собственным разбором HTTP поверх TCP-сокетов.
-До Go — iOS-разработка на Swift с 2021 года. Прошёл swiftbook.ru, Paul Hudson «100 Days of Swift», курс Angela Yu (Udemy), Harvard CS50, участвовал в Swift Marathon X.
-Есть опыт командной работы над проектом — полный цикл от макета в Figma до собранного приложения, code review и работа в общем репозитории через ветки и pull request'ы.
-Почему перешёл в бэкенд. В мобильной разработке мне всегда была интереснее не вёрстка экранов, а то, что происходит под ней: сеть, многопоточность, работа с данными. В Swift это были URLSession, GCD и async/await — в Go те же задачи решаются проще и явнее, через горутины и каналы. Поэтому переход получился не с нуля, а сменой инструмента при том же круге задач.
-Сейчас изучаю: PostgreSQL, Docker, тестирование, устройство HTTP-серверов на уровне стандартной библиотеки.
-Регулярно решаю алгоритмические задачи на LeetCode и Codewars (бейджи ниже).
-Проекты :
-Проект	Описание	Стек
-url-shortener	Сервис коротких ссылок, написанный без net/http и без внешних зависимостей: собственный разбор HTTP/1.1 поверх TCP-сокетов, свой роутер, хранилище за интерфейсом, обработка соединений в горутинах	Go, net, bufio, encoding/json
-EventHub	Командное приложение-афиша мероприятий	Swift, UIKit
-BookStore	Приложение книжного магазина, Swift Marathon X	Swift, UIKit
-MovieHub	Командное приложение-каталог фильмов	Swift, UIKit
+<div align="center">
 
-Языки и инструменты :
-<div> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" title="Go" alt="Go" width="40" height="40"/>&nbsp; <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" title="Git" alt="Git" width="40" height="40"/>&nbsp; <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" title="GitHub" alt="GitHub" width="40" height="40"/>&nbsp; <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" title="Linux" alt="Linux" width="40" height="40"/>&nbsp; <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg" title="Swift" alt="Swift" width="40" height="40"/>&nbsp; <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/xcode/xcode-original.svg" title="XCode" alt="XCode" width="40" height="40"/>&nbsp; </div>
-Технологии :
+<samp>&gt; Hey There!, I am <b>Igor Guryan</b></samp>
 
-Go
+# Backend Developer · Go
 
-Язык: структуры, методы, интерфейсы, срезы и мапы, sentinel-ошибки
-Сеть: TCP-сокеты (net.Listen / Accept), самостоятельный разбор и сборка HTTP/1.1, маршрутизация, JSON через encoding/json
-Конкурентность: горутина на соединение, защита общего состояния через sync.RWMutex, отладка гонок с -race
-Стандартная библиотека: bufio, io, strings, strconv, time, math/rand/v2
-Тестирование: testing, табличные тесты
-Инструменты: go mod, gofmt, go vet, Git (main / develop)
+<samp>「 Krasnodar, Russia 」</samp>
 
-Общее
+<br>
 
-ООП, протокол-ориентированное программирование, SOLID
-REST, клиент-серверное взаимодействие, работа с внешними API
-Git: ветки, pull request'ы, code review
-Алгоритмы и структуры данных
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://sacujo.t.me)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/Sacujo)
+[![Codewars](https://img.shields.io/badge/Codewars-B1361E?style=for-the-badge&logo=codewars&logoColor=white)](https://www.codewars.com/users/Sacujo)
 
-Swift / iOS (предыдущий опыт)
+</div>
 
-UIKit, вёрстка кодом (NSLayoutConstraint, SnapKit)
-Работа с сетью: URLSession
-Хранение данных: UserDefaults, CoreData, Realm
-Архитектуры: MVC, MVP
-Многопоточность: GCD, async/await
-Зависимости: CocoaPods, SPM
+---
+
+## Обо мне
+
+Пишу бэкенд на **Go**. Последний проект — HTTP-сервер с нуля поверх TCP, без веб-фреймворков и без единой внешней зависимости.
+
+До этого четыре года в iOS-разработке на Swift. Выпускник **Школы мобильной разработки Яндекса (ШМР, 2025)**: в финале — командный проект из ~20 человек, где отвечал за чат с ИИ-ассистентом.
+
+> **Почему бэкенд.** В мобильной разработке мне всегда была интереснее не вёрстка экранов, а то, что под ней: сеть, многопоточность, данные. В Swift это были `URLSession`, `GCD` и `async/await` — в Go те же задачи решаются проще и явнее. Переход получился не с нуля, а сменой инструмента при том же круге задач.
+
+---
+
+## Стек
+
+<div align="center">
+
+**Основное**
+
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![JSON](https://img.shields.io/badge/REST_/_JSON-005571?style=flat-square)
+
+**Изучаю сейчас**
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+
+**Предыдущий опыт**
+
+![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-0071E3?style=flat-square&logo=swift&logoColor=white)
+![UIKit](https://img.shields.io/badge/UIKit-2396F3?style=flat-square&logo=uikit&logoColor=white)
+![Xcode](https://img.shields.io/badge/Xcode-147EFB?style=flat-square&logo=xcode&logoColor=white)
+
+</div>
+
+<details>
+<summary><b>Подробный список технологий</b></summary>
+
+<br>
+
+**Go**
+
+| | |
+| --- | --- |
+| Язык | структуры, интерфейсы, методы, обработка ошибок через `error` и sentinel-значения |
+| Сеть | TCP-сокеты (`net`), устройство HTTP/1.1, ручной разбор и сборка запросов и ответов |
+| Конкурентность | горутины, `sync` |
+| Данные | `encoding/json`, `bufio`, `strings.Builder` |
+| Инструменты | `go mod`, `gofmt`, `go vet`, детектор гонок |
+
+**Общее**
+
+ООП, протокол-ориентированное программирование, SOLID, внедрение зависимостей · REST и работа с внешними API · Git: ветки, pull request'ы, code review в команде · алгоритмы и структуры данных
+
+**Swift / iOS**
+
+| | |
+| --- | --- |
+| UI | SwiftUI, UIKit, вёрстка кодом (`NSLayoutConstraint`, SnapKit) |
+| Сеть | `URLSession`, multipart-загрузка файлов |
+| Многопоточность | `async/await`, `@MainActor`, GCD |
+| Хранение | FileManager + JSON, UserDefaults, CoreData, Realm |
+| Архитектуры | MVVM, MVC, MVP, DI-контейнер |
+| Зависимости | SPM, CocoaPods |
+
+</details>
+
+---
+
+## Проекты
+
+### url-shortener — сервис коротких ссылок
+
+[![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)](https://github.com/Sacujo/url-shortener)
+![Зависимости](https://img.shields.io/badge/внешних_зависимостей-0-success?style=flat-square)
+[![Repo](https://img.shields.io/badge/код-GitHub-181717?style=flat-square&logo=github)](https://github.com/Sacujo/url-shortener)
+
+Написан **на чистой стандартной библиотеке и без `net/http`** — HTTP-протокол реализован вручную поверх TCP-сокета.
+
+- **Свой HTTP-слой** — разбор request line и заголовков, чтение тела по `Content-Length`, сборка ответа со статус-кодами 200/201/302/400/404/500
+- **Свой роутер и хендлеры** — создание ссылки, редирект, статистика переходов в JSON
+- **Хранилище за интерфейсом** `Storage` — замена in-memory на СУБД не затрагивает остальной код
+- **Конкурентность** — каждое соединение обрабатывается в отдельной горутине
+- **Структура** `cmd/` + `internal/`: web → router → handler → storage → model
+
+<!-- ЗАПОЛНИТЬ ПОСЛЕ ФИКСОВ: добавь сюда строки, когда сделаешь —
+     «Конкурентный доступ к хранилищу защищён sync.RWMutex»
+     «Парсер запросов и сериализация ответа покрыты табличными тестами»
+     и бейдж покрытия, если настроишь CI -->
+
+---
+
+### Goowee — ассистент для родителя
+
+![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-0071E3?style=flat-square&logo=swift&logoColor=white)
+![Команда](https://img.shields.io/badge/команда-~20_человек-blue?style=flat-square)
+![NDA](https://img.shields.io/badge/код-под_NDA-lightgrey?style=flat-square)
+
+Финальный проект **Школы мобильной разработки Яндекса, 2025**. Продукт из четырёх частей: iOS, Android, Python-микросервисы и RAG-пайплайн. Работа по git flow — ветки, pull request'ы, code review.
+
+Мой вклад в iOS-приложение:
+
+- **Экран чата с ИИ-ассистентом целиком** — список сообщений, ввод с ограничением и счётчиком символов, рендер markdown, состояния загрузки и ошибок, история диалогов, выбор и отправка файлов
+- **`ChatService`** — сетевой слой на `async/await` за протоколом, включая multipart-загрузку файлов
+- **`ChatStorageService`** — персистентное хранение диалогов и файлов в JSON, тоже за протоколом: сервисы подменяются моками
+- **`AppRouter`** — навигация приложения: модальное открытие чата поверх табов, скрытие таббара, возврат на исходную вкладку
+- **`DIContainer`** и вынос `TabBar` в отдельный SPM-пакет `AppComponents`
+
+*Исходный код закрыт по NDA — готов подробно рассказать об архитектуре и решениях на собеседовании.*
+
+---
+
+### Ранние iOS-проекты
+
+![Swift](https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white)
+![UIKit](https://img.shields.io/badge/UIKit-2396F3?style=flat-square&logo=uikit&logoColor=white)
+
+[**EventHub**](https://github.com/Sacujo/EventHub) — афиша мероприятий · [**BookStore**](https://github.com/Sacujo/BookStore) — книжный магазин, Swift Marathon X · [**MovieHub**](https://github.com/Sacujo/MovieHub) — каталог фильмов
+
+<!-- ЗАПОЛНИТЬ: в README каждого репозитория допиши одной строкой, что делал именно ты.
+     Это форки, и без такой строки твою роль не понять. -->
+
+---
+
+## Обучение
+
+**ШМР — Школа мобильной разработки Яндекса**, 2025 · **Harvard CS50** · **swiftbook.ru** · **Paul Hudson «100 Days of Swift»** · **Angela Yu, Udemy** · **Swift Marathon X**
+
+---
+
+<div align="center">
+
+<a href="https://leetcode.com/Sacujo">
+  <img src="https://leetcard.jacoblin.cool/Sacujo?theme=dark&font=Domine&ext=heatmap" alt="LeetCode" />
+</a>
+
+<br><br>
+
+<a href="https://www.codewars.com/users/Sacujo">
+  <img src="https://www.codewars.com/users/Sacujo/badges/large" alt="Codewars" />
+</a>
+
+</div>
