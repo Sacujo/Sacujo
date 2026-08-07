@@ -33,14 +33,11 @@
 **Основное**
 
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![JSON](https://img.shields.io/badge/REST_/_JSON-005571?style=flat-square)
-
-**Изучаю сейчас**
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
 **Предыдущий опыт**
 
@@ -63,6 +60,7 @@
 | Язык | структуры, интерфейсы, методы, обработка ошибок через `error` и sentinel-значения |
 | Сеть | TCP-сокеты (`net`), устройство HTTP/1.1, ручной разбор и сборка запросов и ответов |
 | Конкурентность | горутины, `sync` |
+| Инфраструктура | PostgreSQL (`database/sql` + драйвер `pgx`), Docker, Docker Compose |
 | Данные | `encoding/json`, `bufio`, `strings.Builder` |
 | Инструменты | `go mod`, `gofmt`, `go vet`, детектор гонок |
 
@@ -90,22 +88,20 @@
 ### url-shortener — сервис коротких ссылок
 
 [![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)](https://github.com/Sacujo/url-shortener)
-![Зависимости](https://img.shields.io/badge/внешних_зависимостей-0-success?style=flat-square)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 [![Repo](https://img.shields.io/badge/код-GitHub-181717?style=flat-square&logo=github)](https://github.com/Sacujo/url-shortener)
 
-Написан **на чистой стандартной библиотеке и без `net/http`** — HTTP-протокол реализован вручную поверх TCP-сокета.
+HTTP-протокол реализован вручную поверх TCP-сокета, без `net/http`. В базовой
+(in-memory) конфигурации — ноль внешних зависимостей; единственная зависимость
+во всём проекте — драйвер PostgreSQL, и только если он подключён.
 
-- **Свой HTTP-слой** — разбор request line и заголовков, чтение тела по `Content-Length`, сборка ответа со статус-кодами 200/201/302/400/404/500
+- **Свой HTTP-слой** — разбор request line и заголовков, чтение тела по `Content-Length`, сборка ответа со статус-кодами 200/201/302/400/404/500, покрыт табличными тестами
 - **Свой роутер и хендлеры** — создание ссылки, редирект, статистика переходов в JSON
-- **Хранилище за интерфейсом** `Storage` — замена in-memory на СУБД не затрагивает остальной код
-- **Конкурентность** — каждое соединение обрабатывается в отдельной горутине
+- **Хранилище за интерфейсом** `Storage` — in-memory и PostgreSQL-реализации, переключаются конфигом (`STORAGE_DRIVER`) без изменений в остальном коде
+- **PostgreSQL в Docker Compose** — таблица создаётся автоматически при старте, счётчик кликов инкрементируется атомарным `UPDATE` на стороне БД
+- **Конкурентность** — каждое соединение обрабатывается в отдельной горутине; доступ к in-memory хранилищу защищён `sync.RWMutex`, проверено `go test -race`
 - **Структура** `cmd/` + `internal/`: web → router → handler → storage → model
-
-<!-- ЗАПОЛНИТЬ ПОСЛЕ ФИКСОВ: добавь сюда строки, когда сделаешь —
-     «Конкурентный доступ к хранилищу защищён sync.RWMutex»
-     «Парсер запросов и сериализация ответа покрыты табличными тестами»
-     и бейдж покрытия, если настроишь CI -->
-
 ---
 
 ### Goowee — ассистент для родителя
@@ -135,9 +131,6 @@
 ![UIKit](https://img.shields.io/badge/UIKit-2396F3?style=flat-square&logo=uikit&logoColor=white)
 
 [**EventHub**](https://github.com/Sacujo/EventHub) — афиша мероприятий · [**BookStore**](https://github.com/Sacujo/BookStore) — книжный магазин, Swift Marathon X · [**MovieHub**](https://github.com/Sacujo/MovieHub) — каталог фильмов
-
-<!-- ЗАПОЛНИТЬ: в README каждого репозитория допиши одной строкой, что делал именно ты.
-     Это форки, и без такой строки твою роль не понять. -->
 
 ---
 
